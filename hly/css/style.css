@@ -1,0 +1,464 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 微软雅黑;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+a{color: #000;}
+
+.g-head{
+	position: relative;
+	width: 100%;
+	height:1.5625rem;
+	background-color: #f0f0f0;
+	border-bottom: solid 0.015625rem #c4c4c4;
+}
+.g-head .mid{
+	float: left;
+	position: absolute;
+	left: 50%;
+	width: 3.4375rem;
+	margin-left: -1.71875rem;
+	padding-top: 0.359375rem;
+	text-align: center;
+	/*line-height: 1.5625rem; 为什么不能用呢*/ 
+	font-size: 0.5625rem;
+}
+.g-head #refresh{
+	float: left;
+	margin: 0.34375rem 0 0 0.625rem;
+}
+.g-head #refresh>img{
+	width: 0.8125rem;
+	height: 0.671875rem;
+}
+.g-head #search{
+	float: right;
+	margin: 0.390625rem 0.796875rem 0 0;
+}
+.g-head #search>img{
+	width: 0.765625rem;
+	height: 0.65625rem;
+}
+
+.g-wrap{
+	position: relative;
+	width: 10.0rem;
+	height: 39.84375rem;
+	margin: 0 auto;
+}
+.m-nav{
+	width: 100%;
+	height: 1.375rem;
+}
+/*下面这部分写得很奇怪 不知道怎么优化*/
+/*不知道怎么定position*/
+/*.m-nav a{
+	display: block;
+	float: left;
+	width: 3.3125rem;
+	height: 1.375rem;
+	border-right: solid 0.015625rem #d4d4d4;
+	overflow: hidden;
+	text-align: center;
+	line-height: 1.375rem;
+	color: #000;
+	text-decoration:none;
+}
+.m-nav a:hover{
+	background-color: #e3e3e3;
+}*/
+.m-nav .nlf,.nmid,.nrg{
+	display: block;
+	position: relative;
+	float: left;
+	width: 3.328125rem;
+	height: 1.375rem;
+	border-left: solid 0.015625rem #d4d4d4;
+	overflow: hidden;
+	text-align: center;
+	line-height: 1.375rem;
+	font-size: 0.46875rem;
+	color: #000;
+	text-decoration:none;
+} /*88px*/
+.m-nav .nlf:hover,.nmid:hover,.nrg:hover{
+	background-color: #e3e3e3;
+}
+/*.m-nav .nmid:hover{
+	background-color: #e3e3e3;
+}
+.m-nav .nrg:hover{
+	background-color: #e3e3e3;
+}*/
+.m-nav .nlf{
+	position: absolute;
+	left: 0;
+}
+.m-nav .nmid{
+	position: absolute;
+	left: 3.328125rem;
+}
+.m-nav .nrg{
+	position: absolute;
+	right: 0;
+}
+.m-nav img{
+	position: absolute;
+	right: 0.078125rem;
+	bottom: 0.078125rem;
+}
+
+.m-banner{
+	position: absolute;
+	top: 1.375rem;
+	width: 100%;
+	height: 4.734375rem;
+} /*303px*/
+.m-banner ul{
+	width: 100%;
+	height: 4.734375rem;
+	overflow: hidden;
+}
+.m-banner img{
+	width: 100%;
+	height: 4.734375rem;
+}
+
+.m-tips{
+	position: absolute;
+	top: 6.109375rem;
+	width: 100%;
+	height: 2.9375rem;
+} /*188px*/
+.m-tips .inner1,.inner2,.inner3,.inner4{
+	position: absolute;
+	float: left;
+	width: 2.5rem;
+	height: 2.9375rem;
+}
+.m-tips img{
+	width: 1.5rem;
+	margin: 0.375rem 0.5rem;
+}
+.m-tips span{
+	display: block;
+	width: 2.5rem;
+	font-size: 0.375rem;
+	text-align: center;
+}
+/*.m-tips:hover a{font-weight:80; }*/
+.m-tips .inner1{
+	left: 0rem;
+}
+.m-tips .inner2{
+	left: 2.5rem;
+}
+.m-tips .inner3{
+	left: 5.0rem;
+}
+.m-tips .inner4{
+	left: 7.5rem;
+}
+
+.m-tab{
+	position: absolute;
+	top: 9.0625rem;
+	width: 100%;
+	height: 6.3125rem;
+} /*202px 194*/  /*top 580px*/
+.m-tab .iner1,.iner2{
+	position: relative;
+	width: 100%;
+	height: 3.03125rem;
+	border-top: solid 0.125rem #eae8e8;
+}
+.m-tab .part1,.part2{
+	position: relative;
+	float: left;
+	width: 4.8125rem; /*308*/
+	height: 2.78125rem; /*178*/
+	margin: 0.125rem;
+	margin-right: 0;
+}
+.m-tab .part2{
+	position: absolute;
+	left: 4.9375rem;
+}
+.m-tab img{
+	width: 4.8125rem;
+	height: 2.78125rem;
+	z-index: -1000;
+}
+.m-tab img:hover{
+	opacity: 0.8;
+	filter: alpha(opacity=80); /*ie8及以下*/
+}
+/*184 70*/
+.m-tab .pborder{
+	position: absolute;
+	top: 0.75rem;
+	left: 0.96875rem;
+	width: 2.8125rem;
+	height: 1.03125rem;
+	border: solid 0.03125rem #fff;
+}
+.m-tab .pname{
+	width: 2.6875rem;
+	height: 0.90625rem;
+	margin: 0.0625rem;
+	font-size: 0.46875rem;
+	text-align: center;
+	line-height: 0.90625rem;
+	color: #0b9e54;
+	background-color: #fff;
+}
+
+.m-new{
+	position: absolute;
+	top: 15.375rem;
+	width: 100%;
+	height: 5.0625rem;
+	background-color: #eae8e8;
+} /*324px top 984px*/
+.m-new .tuijian{
+	position: relative;
+	float: left;
+	width: 4.78125rem; /*306*/
+	height: 4.78125rem;
+	margin: 0.125rem;
+	border: solid 0.015625rem #dfdfdf;
+	background-color: #fff;
+}
+.m-new .tuijian .p1{
+	margin: 0.125rem 0 0.09375rem 0.1875rem;
+	font-size: 0.375rem;
+	color: #f69f07;
+}
+.m-new .tuijian .p2{
+	margin-left: 0.46875rem;
+	font-size: 0.3125rem;
+	color: #000;
+}
+.m-new .tuijian .p3{	
+	position: absolute;
+	bottom: 0.1875rem;
+	right: 0.125rem;
+	font-size: 0.28125rem;
+	color: #8e8d8c;
+}
+.m-new .choic-red,.choic-yellow,.choic-green,.choic-blue{
+	width: 1.5625rem;
+	height: 1.375rem;
+	/*background-image: url(../img/red.png);*/
+}
+.m-new .tuijian img{
+	width: 1.5625rem;
+	height: 1.375rem;
+}
+.m-new .choic-red{
+	position: absolute;
+	top: 2.0rem;
+	left: 0.28125rem;
+}
+.m-new .choic-yellow{
+	position: absolute;
+	top: 1.28125rem;
+	left: 1.53125rem;
+}
+.m-new .choic-green{
+	position: absolute;
+	top:  2.734375rem;
+	left: 1.53125rem;
+}
+.m-new .choic-blue{
+	position: absolute;
+	top: 2.0rem;
+	left: 2.78125rem;
+}
+.m-new .news,.needs{
+	float: right;
+	width: 4.78125rem;
+	height: 2.3125rem; /*148*/
+	margin: 0.125rem 0.125rem 0 0;
+	border: solid 0.015625rem #dfdfdf;
+	background-color: #fff;
+}
+.m-new .news>img,.needs>img{
+	width: 1.9375rem;
+	height: 1.9375rem;
+	margin: 0.1875rem 0.15625rem;
+}
+/*.m-new .needs img{
+	width: 1.9375rem;
+	height: 1.9375rem;
+}*/
+.m-new .dtxt,.ntxt{
+	float: right;
+	width: 1.40625rem;
+	height: 2.3125rem;
+	margin: 5px;
+	font-size: 0.34375rem;
+}
+.m-new .ntxt>p{
+	font-size: 0.375rem;
+	text-align: right;
+	color: #f96262;
+}
+.m-new .dtxt>p{
+	font-size: 0.375rem;
+	text-align: right;
+	color: #a825ce;
+}
+.m-ad{
+	position: absolute;
+	top: 20.4375rem;
+	width: 100%;
+	height: 2.53125rem;
+} /*162px top 1308px*/
+.m-ad .adver{
+	width: 9.75rem;
+	height: 2.28125rem;
+	margin: 0.125rem;
+}
+.m-ad img{
+	width: 9.75rem;
+	height: 2.28125rem;
+}
+
+.m-hotit{
+	position: absolute;
+	top: 22.96875rem;
+	width: 100%;
+	height: 0.875rem;
+	/*padding-left: 0.390625rem;*/
+	font-size: 0.46875rem;
+	line-height: 0.875rem;
+	color: #4b4a4a;
+	background-color: #eae8e8;
+} /*56px top 1470px*/
+.m-hotit span{margin-left: 0.390625rem;}
+
+.m-hot{
+	position: absolute;
+	top: 23.84375rem;
+	width: 100%;
+	height: 4.53125rem;
+} /*290px top 1526px*/
+.m-hot img{
+	width: 100%;
+	height: 4.53125rem;
+}
+
+.m-hlist1,.m-hlist2,.m-hlist3{
+	position: absolute;
+	top: 28.375rem;
+	width: 100%;
+	height: 3.0625rem;
+	border-top: solid 0.125rem #eae8e8;
+} /*196px top 1816px*/
+.m-hlist2{top: 31.5625rem;}
+.m-hlist3{top: 34.75rem;} /*2224*/
+.m-hlist1>img,.m-hlist2>img,.m-hlist3>img{
+	float: left;
+	width: 2.6875rem;
+	height: 2.6875rem;
+	padding: 0.0625rem;
+	border: solid 0.015625rem #d8d7d7;
+	margin: 0.125rem;
+}
+.imf1{
+	width: 6.09375rem;
+	margin: 0.3125rem 0 0.15625rem 3.28125rem;
+	font-size: 0.375rem;
+}
+.imf2{
+	margin-left: 3.34375rem;
+	font-size: 0.46875rem;
+	color: #f55494;
+}
+.imf2>span{
+	font-size: 0.28125rem;
+	color: #b7b6b6;
+	text-decoration: line-through;
+}
+.imf3{
+	margin-left: 3.28125rem;
+	font-size: 0.28125rem;
+	color: #b7b6b6;
+}
+#chart{
+	position: absolute;
+	right: 0.78125rem;
+	bottom: 0.46875rem;
+	width: 1.09375rem;
+	height: 1.0rem;
+	padding: 0;	margin: 0;border: 0;
+}
+
+
+.g-footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 1.5625rem;
+	background-color: #000;
+} /*100px top 2404px*/
+.g-footer .fin1,.fin2,.fin3,.fin4,.fin5{
+	position: absolute;
+	width: 20%;
+	height: 1.5625rem;
+	font-size: 0.25rem;
+	text-align: center;
+	color: #fff;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 0.625rem; /*css3*/
+}
+.g-footer .fin1{
+	background-image: url(../img/shouye1.png);
+}
+.g-footer .fin2{
+	background-image: url(../img/chanpin1.png);
+}
+.g-footer .fin3{
+	background-image: url(../img/shangpu1.png);
+}
+.g-footer .fin4{
+	background-image: url(../img/hangye1.png);
+}
+.g-footer .fin5{
+	background-image: url(../img/huiyuan1.png);
+}
+/*下面这个地方不知道怎么优化*/
+.g-footer .fin1:hover{
+	color: #f55494;
+	background-color: #fff;
+	background-image: url(../img/shouye2.png);
+}
+.g-footer .fin2:hover{
+	color: #f55494;
+	background-color: #fff;
+	background-image: url(../img/chanpin2.png);
+}
+.g-footer .fin3:hover{
+	color: #f55494;
+	background-color: #fff;
+	background-image: url(../img/shangpu2.png);
+}
+.g-footer .fin4:hover{
+	color: #f55494;
+	background-color: #fff;
+	background-image: url(../img/hangye2.png);
+}
+.g-footer .fin5:hover{
+	color: #f55494;
+	background-color: #fff;
+	background-image: url(../img/huiyuan2.png);
+}
+.g-footer p{
+	margin-top: 1.171875rem;
+}
