@@ -12,39 +12,40 @@ html,body{
 	display: flex;
 }
 .m-item img{
-	height: 0.6875rem;
-	width: 0.6875rem;
+	height: 0.65625rem;
+	width: 0.65625rem;
 }
 .u-title{
-	font-size: 0.484375rem;
+	font-size: 0.59375rem;
 }
 .g-top{
 	background-color: #f0f0f0;
 }
 .g-top .m-title{
 	height: 1.5625rem;
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-flow: row;
-	    flex-flow: row;
-	-ms-flex-pack: distribute;
-	    justify-content: space-around;
+	flex-flow: row;
+	justify-content: space-around;
 	background-color: #f0f0f0;
-	-ms-flex-align: center;
-	    align-items: center;
-		border-bottom: 1px solid #ddd;
-		box-shadow: 0 1px 1px 0 #ddd;
+	align-items: center;
+	border-bottom: 1px solid #ddd;
+	box-shadow: 0 1px 1px 0 #ddd;
 }
 .g-top .m-nav{
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-flow: row;
-	    flex-flow: row;
-	-ms-flex-pack: distribute;
-	    justify-content: space-around;
+	flex-flow: row;
+	justify-content: space-around;
 	background-color: #f0f0f0;
-	-ms-flex-align: center;
-	    align-items: center;
+	align-items: stretch;
+	line-height: 1.5625rem;
+	height: 1.5625rem;
+}
+.g-top .m-nav .m-item{
+	display: flex;
+	justify-content: center;
+	flex-grow:1;
+	font-size: 0.4375rem;
+	color: #aaa9af;
 }
 
 
