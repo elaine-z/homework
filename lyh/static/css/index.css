@@ -80,6 +80,7 @@ html,entry{
 	line-height: 1.40625rem;
 }
 .m-nav .m-item{
+	position: relative;
 	display: flex;
 	justify-content: center;
 	flex-grow:1;
@@ -165,9 +166,49 @@ html,entry{
 	height: 4.78125rem;
 	display: flex;
 }
+.g-details .m-side-left .u-msg{
+	padding-left: 0.3125rem;
+	line-height: 0.78125rem;
+}
 .m-side{
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	width: 50%;
 	background-color: #fff;
+}
+.m-side-left .m-elements{
+	margin: 0 auto;
+	position: relative;
+	width: 4.0625rem;
+	height: 2.84125rem;
+}
+.m-side-left .m-element{
+	position: absolute;
+}
+.m-side-left .m-red{
+	left: 0;
+	top: 0.6875rem;
+}
+.m-side-left .m-yellow{
+	left: 1.265625rem;
+	top: 0;
+}
+.m-side-left .m-blue{
+	top: 0.6875rem;
+	right: 0;
+}
+.m-side-left .m-green{
+	bottom: 0;
+	left: 1.265625rem;
+}
+.m-side .m-elements img{
+	width: 1.546875rem;
+	height: 1.34375rem;
+}
+.u-more{
+	color: #ddd;
+	position: absolute;
+	right: 0;
+	bottom: 0.078125rem;
 }
