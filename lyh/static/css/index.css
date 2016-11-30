@@ -1,6 +1,17 @@
+/*基础样式*/
 html,body{
 	height: 100%;
 	width: 100%;
+}
+.m-list{
+	display: flex;
+	flex-flow: row nowrap;
+}
+.m-list li{
+	width: 100%;
+}
+.m-list a{
+	display: block;
 }
 [data-dpr="2"] div {
 	font-size: 24px;
@@ -8,9 +19,25 @@ html,body{
 [data-dpr="3"] div {
 	font-size: 36px;
 }
-.m-item{
-	display: flex;
+.z_hover:hover{
+	background-color: #fff;
+	text-decoration: none;
 }
+.item_stretch{
+	display: flex;
+	align-items: stretch;
+}
+.item_stretch_slider li{
+	display: flex;
+	align-items: stretch;
+}
+.item_stretch_slider a{
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	flex-grow:1;
+}
+/*index样式*/
 .m-item img{
 	height: 0.65625rem;
 	width: 0.65625rem;
@@ -31,21 +58,50 @@ html,body{
 	border-bottom: 1px solid #ddd;
 	box-shadow: 0 1px 1px 0 #ddd;
 }
-.g-top .m-nav{
+.m-nav{
 	display: flex;
 	flex-flow: row;
 	justify-content: space-around;
 	background-color: #f0f0f0;
 	align-items: stretch;
-	line-height: 1.5625rem;
-	height: 1.5625rem;
+	line-height: 1.40625rem;
 }
-.g-top .m-nav .m-item{
+.m-nav .m-item{
 	display: flex;
 	justify-content: center;
 	flex-grow:1;
 	font-size: 0.4375rem;
 	color: #aaa9af;
 }
-
-
+.g-top .m-nav img{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 0.28125rem;
+	width: 0.3125rem;
+}
+.g-top .m-banner{
+	height: 4.765625rem;
+	overflow: hidden;
+}
+.g-top .m-slider{
+	width: 100%;
+	overflow: hidden;
+}
+.g-top .m-list img{
+	height: 4.765625rem;
+	display: block;
+}
+.g-body .m-tab{
+	height: 2.921875rem;
+	background-color: #fff;
+}
+.g-body .m-tab img{
+	width: 1.25rem;
+	height: 1.25rem;
+}
+.g-body .m-tab .m-item{
+	flex-direction: column;
+	align-items: center;
+	justify-content:flex-end;
+}
