@@ -21,10 +21,15 @@ html,entry{
 	font-size: 36px;
 }
 .fontyellow{
-	font-size: 0.34375rem;
 	color: #facd7c;
 	margin-top: 0.234375rem;
 	padding-left: 0.3125rem;
+}
+.fontred{
+	color: #fb9191;
+}
+.fontpurple{
+	color: #a825ce;
 }
 .m-item img,.m-btn img{
 	height: 0.65625rem;
@@ -53,6 +58,7 @@ html,entry{
 	justify-content: center;
 	flex-grow:1;
 }
+
 /*index样式*/
 
 .u-title{
@@ -162,7 +168,7 @@ html,entry{
 	background-color: #fff;
 }
 .g-details .m-main{
-	margin-top: 0.078125rem;
+	margin-top: 0.018125rem;
 	height: 4.78125rem;
 	display: flex;
 }
@@ -174,7 +180,10 @@ html,entry{
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	width: 50%;
+	width: 49%;
+	justify-content: flex-start;
+}
+.m-side-left{
 	background-color: #fff;
 }
 .m-side-left .m-elements{
@@ -211,4 +220,51 @@ html,entry{
 	position: absolute;
 	right: 0;
 	bottom: 0.078125rem;
+}
+.m-side-right{
+	width: 49%;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-between;
+}
+.m-side-right .m-tip{
+	display: flex;
+	justify-content: space-between;
+	height: 48%;
+	background-color: #fff;
+}
+.m-side-right .m-msg{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.m-side-right .m-img{
+	width: 50%;
+}
+.m-side-right .m-tip img{
+	height: 90%;
+}
+.m-mainc{
+	margin-top: 0.15625rem;
+}
+.m-mainc .m-ad{
+	background-color: #fff;
+	height: 2.546875rem;
+}
+.m-mainc .m-ad img{
+	width: 97%;
+	height: 90%;
+}
+.m-hot-news .u-title{
+	font-size: 0.46875rem;
+	line-height: 0.78125rem;
+}
+.m-hot-news .m-img{
+	background-color: #fff;
+	height: 4.578125rem;
+}
+.m-hot-news .m-img img{
+	height: 92%;
+	width: 97%;
 }
