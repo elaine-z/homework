@@ -1,5 +1,5 @@
 /*基础样式*/
-html,body{
+html,entry{
 	height: 100%;
 	width: 100%;
 }
@@ -20,7 +20,12 @@ html,body{
 [data-dpr="3"] div {
 	font-size: 36px;
 }
-
+.fontyellow{
+	font-size: 0.34375rem;
+	color: #facd7c;
+	margin-top: 0.234375rem;
+	padding-left: 0.3125rem;
+}
 .m-item img,.m-btn img{
 	height: 0.65625rem;
 	width: 0.65625rem;
@@ -106,31 +111,63 @@ html,body{
 	height: 100%;
 	width: 100%;
 }
-.g-body .m-tab{
+.g-entry .m-tab{
 	height: 2.921875rem;
 	background-color: #fff;
 }
-.g-body .m-tab img{
+.g-entry .m-tab img{
 	width: 1.25rem;
 	height: 1.25rem;
 }
-.g-body .m-tab .m-item{
+.g-entry .m-tab .m-item{
 	flex-direction: column;
 	align-items: center;
 	justify-content:flex-end;
 }
 .m-store{
+	margin-top: 0.15625rem;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
 	height: 6.25rem;
 }
 .m-store-entry{
+	position: relative;
 	width: 50%;
 	background-color: #fff;
 	height: 48%;
 }
+.g-entry .m-store .m-container{
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
 .m-store-entry img{
 	width: 96%;
-	height: 96%;
+	height: 92%;
+}
+.m-store .m-wraper{
+	height: 1.109375rem;
+	border: 1px solid #fff;
+	width: 2.8125rem;
+}
+.m-store .m-wraper .u-content{
+	color: #55bb88;
+	width: 95%;
+	height: 95%;
+	background-color: #fff;
+}
+.g-details .m-main{
+	margin-top: 0.078125rem;
+	height: 4.78125rem;
+	display: flex;
+}
+.m-side{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	background-color: #fff;
 }
