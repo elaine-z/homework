@@ -12,12 +12,23 @@ html,body{
 }
 .m-list a{
 	display: block;
+	height: 100%;
 }
 [data-dpr="2"] div {
 	font-size: 24px;
 }
 [data-dpr="3"] div {
 	font-size: 36px;
+}
+
+.m-item img,.m-btn img{
+	height: 0.65625rem;
+	width: 0.65625rem;
+}
+.f-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .z_hover:hover{
 	background-color: #fff;
@@ -38,10 +49,7 @@ html,body{
 	flex-grow:1;
 }
 /*index样式*/
-.m-item img{
-	height: 0.65625rem;
-	width: 0.65625rem;
-}
+
 .u-title{
 	font-size: 0.59375rem;
 }
@@ -85,12 +93,18 @@ html,body{
 	overflow: hidden;
 }
 .g-top .m-slider{
+	height: 100%;
 	width: 100%;
 	overflow: hidden;
 }
+.g-top .m-list{
+	height: 100%;
+	width: 400%;
+}
 .g-top .m-list img{
-	height: 4.765625rem;
 	display: block;
+	height: 100%;
+	width: 100%;
 }
 .g-body .m-tab{
 	height: 2.921875rem;
@@ -104,4 +118,19 @@ html,body{
 	flex-direction: column;
 	align-items: center;
 	justify-content:flex-end;
+}
+.m-store{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	height: 6.25rem;
+}
+.m-store-entry{
+	width: 50%;
+	background-color: #fff;
+	height: 48%;
+}
+.m-store-entry img{
+	width: 96%;
+	height: 96%;
 }
