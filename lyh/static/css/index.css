@@ -1,6 +1,5 @@
 /*基础样式*/
-html,entry{
-	height: 100%;
+html,body{
 	width: 100%;
 }
 .m-list{
@@ -66,7 +65,6 @@ html,entry{
 }
 .g-top{
 	overflow: hidden;
-	background-color: #f0f0f0;
 }
 .g-top .m-title{
 	z-index: 999;
@@ -77,17 +75,16 @@ html,entry{
 	display: flex;
 	flex-flow: row;
 	justify-content: space-around;
-	background-color: #f0f0f0;
 	align-items: center;
 	border-bottom: 1px solid #ddd;
 	box-shadow: 0 1px 1px 0 #ddd;
+	background-color: #eee;
 }
 .m-nav{
 	margin-top: 1.5625rem;
 	display: flex;
 	flex-flow: row;
 	justify-content: space-around;
-	background-color: #f0f0f0;
 	align-items: stretch;
 	line-height: 1.40625rem;
 }
@@ -125,6 +122,7 @@ html,entry{
 	width: 100%;
 }
 .g-entry .m-tab{
+	margin-top: 0;
 	height: 2.921875rem;
 	background-color: #fff;
 }
@@ -262,6 +260,8 @@ html,entry{
 	width: 97%;
 	height: 90%;
 }
+.g-hot{
+}
 .m-hot-news .u-title{
 	font-size: 0.46875rem;
 	line-height: 0.78125rem;
@@ -273,4 +273,44 @@ html,entry{
 .m-hot-news .m-img img{
 	height: 92%;
 	width: 97%;
+}
+.m-goods .m-good-item{
+	display: flex;
+	height: 3.125rem;
+	background-color: #fff;
+	margin-top: 0.15625rem;
+}
+.m-good-item .m-img-wraper{
+	flex:1;
+}
+.m-good-item .m-img{
+	height: 92%;
+	width: 92%;
+	border: 1px solid #ddd;
+}
+.m-good-item img{
+	height: 95%;
+	width: 95%;
+} 
+.m-good-item .m-info-wraper{
+	flex:2;
+	display: flex;
+	flex-flow: column;
+	align-items: flex-start;
+	
+}
+.m-good-item .m-info-wraper .u-content1{
+	flex:1;
+}
+.m-good-item .m-info-wraper .m-content{
+	display: flex;
+	flex:3;
+	width: 100%;
+}
+.m-info-wraper .m-content .m-content-1{
+	flex:1;
+}
+.m-content .u-price{
+	color: #f55494;
+	font-size: 0.375rem;
 }
