@@ -67,7 +67,7 @@ body{
 	overflow: hidden;
 }
 .u-title{
-	font-size: 0.59375rem;
+	font-size: 25px;
 }
 .g-top-fixed,.g-bottom-fixed{
 	overflow: hidden;
@@ -98,13 +98,15 @@ body{
 	align-items: stretch;
 	line-height: 1.40625rem;
 }
+.g-content .m-nav{
+	font-size: 18px;
+}
 .m-nav .m-item{
 	position: relative;
 	display: flex;
 	justify-content: center;
 	flex-grow:1;
-	font-size: 0.4375rem;
-	color: #aaa9af;
+	color: #272636;
 }
 .m-nav img{
 	position: absolute;
@@ -142,6 +144,10 @@ body{
 	margin-top: 0;
 	height: 2.921875rem;
 	background-color: #fff;
+}
+.m-entry .m-tab .m-item{
+	font-size: 12px;
+	color: #272636;
 }
 .m-entry .m-tab img{
 	position: static;
@@ -262,10 +268,12 @@ body{
 	align-items: flex-end;
 }
 .m-side-right .m-img{
+	height: 100%;
 	width: 50%;
 }
 .m-side-right .m-tip img{
 	height: 90%;
+	width: 90%;
 }
 .m-mainc{
 	margin-top: 0.15625rem;
@@ -282,7 +290,7 @@ body{
 }
 .m-hot-news .u-title{
 	padding-left: 0.3125rem;
-	font-size: 0.46875rem;
+	font-size: 17px;
 	line-height: 0.78125rem;
 }
 .m-hot-news .m-img{
@@ -334,16 +342,14 @@ body{
 }
 .m-content .u-price{
 	color: #f55494;
-	font-size: 0.46875rem;
+	font-size: 16px;
 }
 .m-content .u-num{
 	margin-top: 0.15625rem;
 	color: #ccc;
-	font-size: 0.359375rem;
 }
 .m-content .u-original{
 	margin: 0.15625rem 0 0 0.15625rem;
-	font-size: 0.359375rem;
 	color: #ccc;
 	text-decoration: line-through;
 }
@@ -379,4 +385,5 @@ body{
 .m-foot-btn .u-character{
 	margin-top: 0.078125rem;
 	color: #fff;
+	font-size: 15px;
 }
