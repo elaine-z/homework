@@ -65,9 +65,14 @@ html,entry{
 	font-size: 0.59375rem;
 }
 .g-top{
+	overflow: hidden;
 	background-color: #f0f0f0;
 }
 .g-top .m-title{
+	z-index: 999;
+	position: fixed;
+	width: 100%;
+	top: 0;
 	height: 1.5625rem;
 	display: flex;
 	flex-flow: row;
@@ -78,6 +83,7 @@ html,entry{
 	box-shadow: 0 1px 1px 0 #ddd;
 }
 .m-nav{
+	margin-top: 1.5625rem;
 	display: flex;
 	flex-flow: row;
 	justify-content: space-around;
