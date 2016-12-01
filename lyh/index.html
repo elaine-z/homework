@@ -79,7 +79,7 @@
 					<div class='m-img f-center'>
 						<img src="static/imgs/news.png">
 					</div>
-					<div class="m-msg f-center">
+					<div class="m-msg">
 						<p class='fontred'>读新闻</p>
 						<p>了解</p>
 						<p>最新的</p>
@@ -90,7 +90,7 @@
 					<div class='m-img f-center'>
 						<img src="static/imgs/needs.png">
 					</div>
-					<div class="m-msg f-center">
+					<div class="m-msg">
 						<p class='fontpurple'>懂需求</p>
 						<p>了解</p>
 						<p>最新的</p>
@@ -197,13 +197,11 @@
 	</div>
 	<div class="g-bottom-fixed">
 		<div class="m-container">
-			<a href="" class='m-foot-btn'><div class='m-img'><img src="static/imgs/shouye1.png"></div><div class="u-character">首页</div></a>
-			<a href="" class='m-foot-btn'><div class='m-img'><img src="static/imgs/chanpin1.png"></div><div class="u-character">首页</div></a>
-			<a href="" class='m-foot-btn'><div class='m-img'><img src="static/imgs/shangpu1.png"></div><div class="u-character">首页</div></a>
-			<a href="" class='m-foot-btn'><div class='m-img'><img src="static/imgs/huiyuan1.png"></div><div class="u-character">首页</div></a>
-			<!-- <div class='m-btn'><img src="static/imgs/refresh.png"></div>
-			<div class='m-item u-title'>诚信女装</div>
-			<div class='m-btn'><img src="static/imgs/sch.png"></div> -->
+			<a href="javascript:void(0)" class='m-foot-btn m-shouye z-sel'><div class='m-img shouye'></div><div class="u-character">首页</div></a>
+			<a href="javascript:void(0)" class='m-foot-btn m-canping'><div class='m-img canpin'></div><div class="u-character">产品分类</div></a>
+			<a href="javascript:void(0)" class='m-foot-btn m-shangpu'><div class='m-img shangpu'></div><div class="u-character">商铺中心</div></a>
+			<a href="javascript:void(0)" class='m-foot-btn m-hangye'><div class='m-img hangye'></div><div class="u-character">行业新闻</div></a>
+			<a href="javascript:void(0)" class='m-foot-btn m-huiyuan'><div class='m-img huiyuan'></div><div class="u-character">会员中心</div></a>
 		</div>
 	</div>
 	</div>
@@ -229,6 +227,20 @@ $(function(){
         },
         threshold : 50
     });
+
+    //底部按钮
+    $('.m-foot-btn').on('click',function(){
+    	if($('.g-bottom-fixed .z-sel') != $(this)){
+    		if($('.m-shouye').hasClass('z-sel')){
+    			$('.shouye').addClass('shouye_sel');
+    		}
+    		if($(this).find('.shouye').hasClass('shouye_sel')){
+    			$('.shouye').removeClass('shouye_sel');
+    		}
+    		$('.g-bottom-fixed .z-sel').removeClass('z-sel');
+    		$(this).addClass('z-sel');
+    	}
+    })
 });
 	</script>
 </body>

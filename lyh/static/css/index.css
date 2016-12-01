@@ -46,6 +46,12 @@ body{
 	background-color: #fff;
 	text-decoration: none;
 }
+.z-sel{
+	background-color: #fff;
+}
+.z-sel .u-character{
+	color: #f55b99 !important;
+}
 .item_stretch{
 	display: flex;
 	align-items: stretch;
@@ -250,6 +256,7 @@ body{
 	bottom: 0.078125rem;
 }
 .m-side-right{
+	height: 100%;
 	width: 49%;
 	display: flex;
 	flex-direction: column;
@@ -262,14 +269,16 @@ body{
 	background-color: #fff;
 }
 .m-side-right .m-msg{
-	width: 50%;
+	flex:1;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
+	justify-content:center;
+	font-size: 16px;
 }
 .m-side-right .m-img{
 	height: 100%;
-	width: 50%;
+	flex:1;
 }
 .m-side-right .m-tip img{
 	height: 90%;
@@ -378,12 +387,45 @@ body{
 	align-items: center;
 	justify-content: center;	
 }
-.m-foot-btn img{
+.m-foot-btn .m-img{
 	width: 0.625rem;
 	height: 0.5625rem;
+	background-size: 0.625rem 0.5625rem !important;
 }
 .m-foot-btn .u-character{
 	margin-top: 0.078125rem;
 	color: #fff;
-	font-size: 15px;
+}
+.m-foot-btn:hover{
+	color: #f55b99 !important;
+}
+.shouye_sel{
+	background: url(../imgs/shouye1.png) no-repeat center top !important;
+}
+.shouye{
+	background: url(../imgs/shouye2.png) no-repeat center top;
+}
+.canpin{
+	background: url(../imgs/chanpin1.png) no-repeat center top;
+}
+.shangpu{
+	background: url(../imgs/shangpu1.png) no-repeat center top;
+}
+.hangye{
+	background: url(../imgs/hangye1.png) no-repeat center top;
+}
+.huiyuan{
+	background: url(../imgs/huiyuan1.png) no-repeat center top;
+}
+.canpin:hover{
+	background: url(../imgs/chanpin2.png) no-repeat center top;
+}
+.shangpu:hover{
+	background: url(../imgs/shangpu2.png) no-repeat center top;
+}
+.hangye:hover{
+	background: url(../imgs/hangye2.png) no-repeat center top;
+}
+.huiyuan:hover{
+	background: url(../imgs/huiyuan2.png) no-repeat center top;
 }
