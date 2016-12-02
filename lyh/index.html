@@ -197,11 +197,83 @@
 	</div>
 	<div class="g-bottom-fixed">
 		<div class="m-container">
-			<a href="javascript:void(0)" class='m-foot-btn m-shouye z-sel'><div class='m-img shouye'></div><div class="u-character">首页</div></a>
-			<a href="javascript:void(0)" class='m-foot-btn m-canping'><div class='m-img canpin'></div><div class="u-character">产品分类</div></a>
-			<a href="javascript:void(0)" class='m-foot-btn m-shangpu'><div class='m-img shangpu'></div><div class="u-character">商铺中心</div></a>
-			<a href="javascript:void(0)" class='m-foot-btn m-hangye'><div class='m-img hangye'></div><div class="u-character">行业新闻</div></a>
-			<a href="javascript:void(0)" class='m-foot-btn m-huiyuan'><div class='m-img huiyuan'></div><div class="u-character">会员中心</div></a>
+			<div class="container">
+				<a href="javascript:void(0)" class='m-foot-btn z-active'>
+					<div class='btn-container'>
+						<div class='m-img'>
+							<img src="static/imgs/shouye1.png">
+						</div>
+						<div class="u-character">首页</div>
+					</div>
+					<div class='btn-container-hidden'>
+						<div class='m-img'>
+							<img src="static/imgs/shouye2.png">
+						</div>
+						<div class="u-character">首页</div>
+					</div>
+				</a>
+
+				<a href="javascript:void(0)" class='m-foot-btn'>
+					<div class='btn-container'>
+						<div class='m-img'>
+							<img src="static/imgs/chanpin1.png">
+						</div>
+						<div class="u-character">产品分类</div>
+					</div>
+					<div class='btn-container-hidden'>
+						<div class='m-img'>
+							<img src="static/imgs/chanpin2.png">
+						</div>
+						<div class="u-character">产品分类</div>
+					</div>
+				</a>
+
+				<a href="javascript:void(0)" class='m-foot-btn'>
+					<div class='btn-container'>
+						<div class='m-img'>
+							<img src="static/imgs/shangpu1.png">
+						</div>
+						<div class="u-character">商铺中心</div>
+					</div>
+					<div class='btn-container-hidden'>
+						<div class='m-img'>
+							<img src="static/imgs/shangpu2.png">
+						</div>
+						<div class="u-character">商铺中心</div>
+					</div>
+				</a>
+
+
+				<a href="javascript:void(0)" class='m-foot-btn'>
+					<div class='btn-container'>
+						<div class='m-img'>
+							<img src="static/imgs/hangye1.png">
+						</div>
+						<div class="u-character">行业新闻</div>
+					</div>
+					<div class='btn-container-hidden'>
+						<div class='m-img'>
+							<img src="static/imgs/hangye2.png">
+						</div>
+						<div class="u-character">行业新闻</div>
+					</div>
+				</a>
+
+				<a href="javascript:void(0)" class='m-foot-btn'>
+					<div class='btn-container'>
+						<div class='m-img'>
+							<img src="static/imgs/huiyuan1.png">
+						</div>
+						<div class="u-character">会员中心</div>
+					</div>
+					<div class='btn-container-hidden'>
+						<div class='m-img'>
+							<img src="static/imgs/huiyuan2.png">
+						</div>
+						<div class="u-character">会员中心</div>
+					</div>
+				</a>
+			</div>
 		</div>
 	</div>
 	</div>
@@ -228,19 +300,14 @@ $(function(){
         threshold : 50
     });
 
-    //底部按钮
+    //点击底部按钮
     $('.m-foot-btn').on('click',function(){
-    	if($('.g-bottom-fixed .z-sel') != $(this)){
-    		if($('.m-shouye').hasClass('z-sel')){
-    			$('.shouye').addClass('shouye_sel');
-    		}
-    		if($(this).find('.shouye').hasClass('shouye_sel')){
-    			$('.shouye').removeClass('shouye_sel');
-    		}
-    		$('.g-bottom-fixed .z-sel').removeClass('z-sel');
-    		$(this).addClass('z-sel');
+    	if(!$(this).hasClass('z-active')){
+    		$('.z-active').removeClass('z-active');
+    		$(this).addClass('z-active');
     	}
     })
+
 });
 	</script>
 </body>

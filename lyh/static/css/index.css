@@ -375,57 +375,44 @@ body{
 	bottom: 0;
 }
 .g-bottom-fixed .m-container{
+	position: relative;
+}
+.g-bottom-fixed .container{
 	display: flex;
 	height: 1.5625rem;
-	background-color: #191717;
 	align-items: stretch;
+}
+.btn-container,.btn-container-hidden{
+	height: 100%;
+	display: flex;
+	flex-flow:column;
+	justify-content: center;
+	align-items: center;
+}
+.m-foot-btn .btn-container-hidden{
+	background-color: #fff;
+}
+.m-foot-btn .btn-container-hidden .u-character{
+	color: #f77eae;
 }
 .m-foot-btn{
 	flex:1;
-	display: flex;
 	flex-flow:column;
-	align-items: center;
-	justify-content: center;	
+	align-items: stretch;
+	justify-content: center;
+	background-color: #191717;	
 }
-.m-foot-btn .m-img{
+.m-foot-btn .m-img img{
 	width: 0.625rem;
 	height: 0.5625rem;
-	background-size: 0.625rem 0.5625rem !important;
 }
 .m-foot-btn .u-character{
-	margin-top: 0.078125rem;
+	margin-top: 0.088125rem;
 	color: #fff;
 }
-.m-foot-btn:hover{
-	color: #f55b99 !important;
+.z-active .btn-container{
+	display: none;
 }
-.shouye_sel{
-	background: url(../imgs/shouye1.png) no-repeat center top !important;
-}
-.shouye{
-	background: url(../imgs/shouye2.png) no-repeat center top;
-}
-.canpin{
-	background: url(../imgs/chanpin1.png) no-repeat center top;
-}
-.shangpu{
-	background: url(../imgs/shangpu1.png) no-repeat center top;
-}
-.hangye{
-	background: url(../imgs/hangye1.png) no-repeat center top;
-}
-.huiyuan{
-	background: url(../imgs/huiyuan1.png) no-repeat center top;
-}
-.canpin:hover{
-	background: url(../imgs/chanpin2.png) no-repeat center top;
-}
-.shangpu:hover{
-	background: url(../imgs/shangpu2.png) no-repeat center top;
-}
-.hangye:hover{
-	background: url(../imgs/hangye2.png) no-repeat center top;
-}
-.huiyuan:hover{
-	background: url(../imgs/huiyuan2.png) no-repeat center top;
+.z-active .btn-container-hidden{
+	display: flex;
 }
