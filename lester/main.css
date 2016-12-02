@@ -1,0 +1,450 @@
+@charset "utf-8";
+/* CSS Document */
+/*reset*/
+*{
+	margin: 0; 
+    padding: 0; 
+    border: 0; 
+    font-size: 100%; 
+    font: inherit; 
+    vertical-align: baseline; 
+	}
+body{
+	line-height:1;
+	}
+ol,ul{
+	list-style:none;
+	}
+a{
+	text-decoration:none;
+	}
+a:active,a:hover{
+	text-decoration:none;
+	background:none;
+	}
+.set1332{
+	width:1332px;
+	margin:0 auto;
+	}
+.set833{
+	width:833px;
+	display:inline-block;
+	}
+.set472{
+	width:472px;
+	display:inline-block;
+	vertical-align:top;
+	}
+/*header*/
+header{
+	height:38px;
+	width:100%;
+	background-color:#333333;
+    font-size:14px;
+	color:#bababa;
+	}
+header .location{
+	margin-left:8px;
+	margin-top:9px;
+	margin-right:11px;
+	vertical-align:top;
+	}
+.header_city{
+	font-size:14px;
+	font-family:"宋体";
+	margin-right:17px;
+	vertical-align:bottom;
+	}
+.selectCity{
+	background-color:#333333;
+	color:#FFF;
+	font-size:14px;
+	vertical-align:super;
+	margin-right:382px;
+	vertical-align:bottom;
+	}
+.header_welcome{
+	margin-right:28px;
+    vertical-align:bottom;
+	}
+.header_button{
+	border-radius:5px;
+	margin-right:33px;
+	width:84px;
+	color:#bababa;
+	background-color:#333333;
+	border:1px solid #bababa;
+	cursor:pointer;
+	vertical-align:bottom;
+	}
+.header_test{
+	
+	}
+.header_share{
+	vertical-align:bottom;
+	}
+.header_share ul{
+	display:inline
+	}
+.header_share ul li{
+	float:right;
+	display:inline-block;
+	width:48px;
+	font-size:8px;
+	text-align:center;
+	margin-left:6px;
+	cursor:pointer;	
+	}
+	
+	
+	
+/*导航*/
+/*使用浮动布局 优缺点：清除浮动麻烦*/
+nav{
+	height:95px;
+	}
+.nav_logo{
+	margin-top:19px;
+	float:left;
+	}
+.nav_select{
+	 margin-left:363px;
+	}
+.nav_select li{
+	}
+.nav_select li a{
+	 margin-top:19px;
+	 float:left;
+     padding:18px 13px;
+	 margin-right:31px;
+	 font-size:20px;
+	 color:#000;
+	 font-family:"微软雅黑";
+	}
+.nav_select li a:hover,a:active{
+	background:#275599;
+	color:#FFF;
+	}
+.nav_select li .nav_special{
+	padding-top:15px;
+	}
+#nav_search{
+	background:#FFF;
+	padding-top:17px;
+	}
+	
+	
+	
+/*banner*/
+.banner{
+	width:100%;
+	height:526px;
+	background-image:url(images/banner.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	}
+	
+	
+/*same&&sameSpan*/
+.same{
+	font-size:28px;
+	line-height:48px;
+	font-family:"微软雅黑";
+	letter-spacing:8px;
+	}
+.sameSpan{
+	font-size:14px;
+	color:#8e8d8d;
+	letter-spacing:0px;
+	margin-left:10px;
+	}
+
+
+/*insurance*/
+/*运用flex布局*/
+.insurance_relative{
+	display:flex;
+	width:1332px;
+	}
+.insurance_relative a{
+	flex:1;
+	}
+.insurance_left{
+	width:394px;
+	height:186px;
+	background-image:url(images/insurance_1.png);
+	background-repeat:no-repeat;
+	margin-right:73px;
+	}
+.insurance_middle{
+	width:394px;
+	height:184px;
+	background-image:url(images/insurance_2.png);
+	background-repeat:no-repeat;
+	margin-right:73px;
+	}
+.insurance_right{
+	background-image:url(images/insurance_3.png);
+	background-repeat:no-repeat;
+	width:400px;
+	height:183px;
+	
+	}
+.insurance_relative span{
+	display:block;
+	margin-left:38px;
+	margin-top:30px;
+	}
+	
+	
+	
+/*service*/
+/*ul li 布局*/
+.service_setColor{
+	height:434px;
+	width:100%;
+	background-color:#f5f5f5;
+	}
+.service_main{
+	height:434px;
+	width:1332px;
+	background-color:#f5f5f5;
+	}
+.service_main_first{
+	width:240px;
+	height:400px;
+	display:inline-block;
+	margin-top:14px;
+	margin-left:18px;
+	text-align:center;
+	background-color:#FFF;
+	}
+.service_main_first h1{
+	margin-top:27px;
+	font-size:60px;
+	font-family:"微软雅黑";
+	color:#8d8b8b;
+	text-align:center;
+	}
+.service_main_first .line{
+	margin:27px auto;
+	width:160px;
+	height:1px;
+	background-color:#d4d4d4;
+	}
+.service_main_first h2{
+	margin-bottom:64px;
+	font-size:20px;
+	font-family:"微软雅黑";
+	}
+	
+	
+/*case*/
+/*table布局
+  缺点：如果布局变更，需要重新开发；如果table里有div ul 等，可能会出现浏览器兼容问题；加载速度慢
+  优点：开发时间短（使用DW开发速度快）；纯table各浏览器不会有兼容问题；内容可自适应；在搜索引擎排名能靠前
+  */
+.case_main
+{
+	display:table;
+	width:1332px;
+	margin:0 auto;
+	}
+.case_main_content_row{
+	display:table-row;
+	}
+.case_main_content{
+	display:table-cell;
+	padding-right:24px;
+	cursor:pointer;
+	}
+	
+	
+/*people*/
+.people_main_left{
+	width:833px;
+	height:390px;
+	background-color:#f5f5f5;
+	}
+.people_radius{
+	display:inline-block;
+	float:right;
+	cursor:pointer;
+	margin:20px 10px;
+	border:solid 1px #dddddd;
+	background-color:#dddddd;
+	width:10px;
+	height:10px;
+	border-radius:10px;
+	}
+.people_content{
+	width:273px;
+	height:140px;
+	float:left;
+	margin:28px 0px;
+	}
+.people_content_text{
+	width:100px;
+	height:100px;
+	font-size:14px;
+	font-family:"微软雅黑";
+	line-height:33px;
+	vertical-align:top;
+	margin-top:27px;
+	margin-left:20px;
+	display:inline-block;
+	}
+.people_content_text span{
+	font-size:18px;
+	}
+
+.set472 .same{
+	letter-spacing:0px;
+	}
+.people_main_right{
+	background-color:#f5f5f5;
+	}
+.people_main_right ol li{
+	font-size:14px;
+	font-family:"宋体";
+	line-height:46px;
+	}
+.people_content_right_red{
+	font-family:"微软雅黑";
+	color:#f25618;
+	font-size:20px;
+	}
+.people_content_right1{
+	font-size:20px;
+	margin-right:40px;
+	margin-left:26px;
+	}
+	
+	
+	
+	
+/*repair*/
+.repair_content{
+	width:666px;
+	height:200px;
+	float:left;
+	margin-bottom:48px;
+	}
+.repair_content_text{
+	width:320px;
+	height:200px;
+	display:inline-block;
+	vertical-align:bottom;
+	font-size:13px;
+	font-family:"宋体";
+	line-height:36px;
+	}
+.repair_content_text h1{
+	font-size:14px;
+	font-family:"微软雅黑";
+	color:#353535;
+		}
+.repair_comment{
+	float:right;
+	margin-top:25px;
+	word-spacing:12px;
+	}
+.repair_content_text a{
+	color:#f25618;
+	}
+	
+	
+	
+/*link*/
+.link{
+	height:52px;
+	width:100%;
+	top:48px;
+	clear:both;
+	background-color:#999999;
+	}
+.link ul li{
+	font-size:14px;
+	font-family:"宋体";
+	float:left;
+	margin-right:57px;
+	line-height:52px;
+	}
+.link .link_1{
+	font-size:16px;
+	font-family:"微软雅黑";
+	}
+.link ul li a{
+	color:#676767;
+	}
+.link ul li a:hover{
+	color:#FFF;
+	}
+	
+	
+	
+/*footer*/
+footer{
+	width:100%;
+	height:220px;
+	background-color:#2f2f2f;
+	color:#FFF;
+	font-size:13px;
+	font-family:"宋体";
+	}
+footer ul{
+	}
+footer ul li a{
+	color:#FFF;
+	}
+.footer_left{
+	width:300px;
+	display:inline-block;
+	}
+.footer_nav{
+	width:240px;
+	}
+footer ul span{
+	font-size:16px;
+	font-family:"微软雅黑";
+	line-height:60px;
+	}
+footer li {
+	margin-bottom:25px;
+	width:100px;
+	float:left;
+	display:block;
+	margin-right:20px;
+	}
+.footer_aboutUS{
+	width:100px;;
+	margin-left:200px;
+	display:inline-flex;
+}
+footer img{
+	vertical-align:text-top;
+	}
+.footer_text{
+	width:300px;
+	height:300px;
+	display:inline-block;
+	}
+.footer_text span{
+	margin-top:52px;
+	display:inline-block;
+	vertical-align:middle;
+	}
+	
+	
+
+/*police*/
+
+.police{
+	width:100%;
+	height:44px;
+	color:white;
+	background-color:#2b2b2b;
+	font-size:13px;
+	text-align:center;
+	line-height:44px;
+	}
