@@ -144,6 +144,7 @@ html,body{
 }
 .m-pulldown .m-icon{
 	flex:1;
+	justify-content: flex-start;
 }
 .m-nav .pulldown-hide{
 	display: none;
