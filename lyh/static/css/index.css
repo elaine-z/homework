@@ -128,6 +128,12 @@ html,body{
 	padding-left: 0.3125rem;
 	position: relative;
 }
+.m-nav .m-pulldown li:hover{
+	background: #fff;
+}
+.m-nav .m-pulldown li:hover a{
+	color: #333;
+}
 .m-nav .m-pulldown li img{
 	position: absolute;
 	right: 0.78125rem;
