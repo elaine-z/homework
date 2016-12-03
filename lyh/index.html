@@ -344,10 +344,15 @@ $(function(){
     	}
     })
 
+    //触屏滑动
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
-        paginationClickable: true
+        paginationClickable: true,
+        centeredSlides: true,
+        autoplay: 2000,
+        autoplayDisableOnInteraction: false
     });
+ 
 });
 	</script>
 </body>
