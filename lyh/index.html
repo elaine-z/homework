@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" href="static/css/reset.css">
 <link rel="stylesheet" type="text/css" href="static/css/dropload.css">
 <link rel="stylesheet" type="text/css" href="static/css/index.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
 <script src='static/js/flexible_css.debug.js'></script>
 <script src='static/js/flexible.debug.js'></script>
 </head>
@@ -70,18 +71,15 @@
 		</div>
 		<div class="m-banner">
 			<div class="m-slider">
-				<ul class='m-list'>
-					<li><a href=""><img src="static/imgs/banner1.png" alt=""></a></li>
-					<li><a href=""><img src="static/imgs/banner1.png" alt=""></a></li>
-					<li><a href=""><img src="static/imgs/banner1.png" alt=""></a></li>
-					<li><a href=""><img src="static/imgs/banner1.png" alt=""></a></li>
-				</ul>
-				<div class='m-pt'>
-					<a href=""></a>
-					<a href=""></a>
-					<a href=""></a>
-					<a href=""></a>
-				</div>
+   				<div class="swiper-container">
+        			<div class="swiper-wrapper">
+            		<div class="swiper-slide"><img src="static/imgs/banner1.png"></div>
+            		<div class="swiper-slide"><img src="static/imgs/adver.png"></div>
+           			<div class="swiper-slide"><img src="static/imgs/banner1.png"></div>
+        		</div>
+        		<!-- Add Pagination -->
+        		<div class="swiper-pagination"></div>
+   		 		</div>
 			</div>
 		</div>
 		<div class="m-entry">
@@ -316,6 +314,7 @@
 	</div>
 	<script src='static/js/jquery.min.js'></script>
 	<script src='static/js/dropload.min.js'></script>
+	<script src='static/js/swiper.jquery.min.js'></script>
 	<script>
 $(function(){
     // dropload
@@ -345,6 +344,10 @@ $(function(){
     	}
     })
 
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
 });
 	</script>
 </body>
