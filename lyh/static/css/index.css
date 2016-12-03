@@ -122,11 +122,10 @@ html,body{
 	text-align: center;
 }
 .m-nav .m-pulldown li{
-	line-height: 0.8125rem;
+	line-height: 0.7125rem;
 	background-color: #191818;
 	border-bottom: 1px solid #5d5356;
 	text-align: left;
-	padding-left: 0.3125rem;
 	position: relative;
 }
 .m-nav .m-pulldown li:hover{
@@ -136,11 +135,15 @@ html,body{
 	color: #333;
 }
 .m-nav .m-pulldown li img{
-	position: absolute;
-	right: 0.78125rem;
-	top: 0;
-	bottom: 0;
-	margin: auto;
+	position: static;
+}
+.m-pulldown .u-option{
+	font-size: 14px;
+	text-align: center;
+	flex:2;
+}
+.m-pulldown .m-icon{
+	flex:1;
 }
 .m-nav .pulldown-hide{
 	display: none;
@@ -149,6 +152,7 @@ html,body{
 	display: block;
 }
 .m-pulldown a{
+	display: flex;
 	color: #fff;
 }
 .m-nav img{
