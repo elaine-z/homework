@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" href="static/css/reset.css">
 <link rel="stylesheet" type="text/css" href="static/css/dropload.css">
 <link rel="stylesheet" type="text/css" href="static/css/index.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
 <script src='static/js/flexible_css.debug.js'></script>
 <script src='static/js/flexible.debug.js'></script>
 </head>
@@ -27,24 +28,96 @@
 	<div class="g-scroll-wrap">
 		<div class="g-content">
 		<div class="m-nav">
-			<a href="#" class='m-item z_hover'><span>全部地区</span><img src="static/imgs/corner.png"></a>
-			<a href="#" class='m-item z_hover'><span>全部分类</span><img src="static/imgs/corner.png"></a>
-			<a href="#" class='m-item z_hover'><span>人气最高</span><img src="static/imgs/corner.png"></a>
+			<div class="m-nav-item">
+			<a class='m-item z_hover'><span>全部地区</span><img src="static/imgs/corner.png">
+			</a>
+			<ul class='m-pulldown pulldown-hide'>
+					<li><a href="javascript:void(0)"><div class="u-option">北京</div></a></li>
+					<li><a href="javascript:void(0)"><div class="u-option">上海</div></a></li>
+					<li><a href="javascript:void(0)"><div class="u-option">深圳</div></a></li>
+					<li><a href="javascript:void(0)"><div class="u-option">苏州</div></a></li>
+					<li><a href="javascript:void(0)"><div class="u-option">南京</div></a></li>
+					<li><a href="javascript:void(0)"><div class="u-option">合肥</div></a></li>
+					<li><a href="javascript:void(0)"><div class="u-option">杭州</div></a></li>
+					<li><a href="javascript:void(0)"><div class="u-option">天津</div></a></li>
+			</ul>
+			</div>
+
+			<div class="m-nav-item">
+			<a class='m-item z_hover'><span>全部分类</span><img src="static/imgs/corner.png"></a>
+			<ul class='m-pulldown pulldown-hide'>
+					<li><a href="javascript:void(0)"><div class="u-option">新品上架</div></a></li>
+					<li><a href="javascript:void(0)"><div class="u-option">连衣裙</div></a></li>
+					<li><a href="javascript:void(0)"><div class="u-option">蕾丝裙</div></a></li>
+					<li><a href="javascript:void(0)"><div class="u-option">雪纺裙</div></a></li>
+					<li><a href="javascript:void(0)"><div class="u-option">T恤</div></a></li>
+					<li><a href="javascript:void(0)"><div class="u-option">衬衫</div></a></li>
+					<li><a href="javascript:void(0)"><div class="u-option">牛仔裤</div></a></li>
+					<li><a href="javascript:void(0)"><div class="u-option">哈伦裤</div></a></li>
+			</ul>
+			</div>
+
+			<div class="m-nav-item">
+			<a class='m-item z_hover'><span>人气最高</span><img src="static/imgs/corner.png"></a>
+			<ul class='m-pulldown pulldown-hide'>
+					<li>
+						<a href="javascript:void(0)">
+							<div class='u-option'>人气最高</div>
+							<div class="m-icon f-center">
+								<img src="static/imgs/yonghu.png">
+								<img src="static/imgs/paixu.png" style="width: 4px;margin-left: 0.078125rem">
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<div class='u-option'>价格最低</div>
+							<div class="m-icon f-center">
+								<img src="static/imgs/qian.png">
+								<img src="static/imgs/paixu1.png" style="width: 4px;margin-left: 0.078125rem">
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<div class='u-option'>价格最高</div>
+							<div class="m-icon f-center">
+								<img src="static/imgs/qian.png">
+								<img src="static/imgs/paixu.png" style="width: 4px;margin-left: 0.078125rem">
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<div class='u-option'>销量最高</div>
+							<div class="m-icon f-center">
+								<img src="static/imgs/biaoqian.png">
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<div class='u-option'>折扣最低</div>
+							<div class="m-icon f-center">
+								<img src="static/imgs/youhui.png">
+							</div>
+						</a>
+					</li>
+			</ul>
+			</div>
+
 		</div>
 		<div class="m-banner">
 			<div class="m-slider">
-				<ul class='m-list'>
-					<li><a href=""><img src="static/imgs/banner1.png" alt=""></a></li>
-					<li><a href=""><img src="static/imgs/banner1.png" alt=""></a></li>
-					<li><a href=""><img src="static/imgs/banner1.png" alt=""></a></li>
-					<li><a href=""><img src="static/imgs/banner1.png" alt=""></a></li>
-				</ul>
-				<div class='m-pt'>
-					<a href=""></a>
-					<a href=""></a>
-					<a href=""></a>
-					<a href=""></a>
-				</div>
+   				<div class="swiper-container">
+        			<div class="swiper-wrapper">
+            		<div class="swiper-slide"><img src="static/imgs/banner1.png"></div>
+            		<div class="swiper-slide"><img src="static/imgs/adver1.png"></div>
+           			<div class="swiper-slide"><img src="static/imgs/banner1.png"></div>
+        		</div>
+        		<!-- Add Pagination -->
+        		<div class="swiper-pagination"></div>
+   		 		</div>
 			</div>
 		</div>
 		<div class="m-entry">
@@ -101,7 +174,7 @@
 		</div>
 		<div class="m-mainc">
 			<a class="m-ad f-center">
-				<img src="static/imgs/adver.png">
+				<img src="static/imgs/adver1.png">
 			</a>
 		</div>
 	</div>
@@ -279,6 +352,7 @@
 	</div>
 	<script src='static/js/jquery.min.js'></script>
 	<script src='static/js/dropload.min.js'></script>
+	<script src='static/js/swiper.jquery.min.js'></script>
 	<script>
 $(function(){
     // dropload
@@ -308,6 +382,15 @@ $(function(){
     	}
     })
 
+    //触屏滑动
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        centeredSlides: true,
+        autoplay: 2000,
+        autoplayDisableOnInteraction: false
+    });
+ 
 });
 	</script>
 </body>
