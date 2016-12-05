@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="second.css">
+    <script>
+        window.onload=
+                function () {
+                    var container = document.getElementById('container');
+                    var list = document.getElementById('list');
+                    var buttons = document.getElementById('buttons').getElementsByTagName('span');
+                    var prev = document.getElementById('prev');
+                    var next = document.getElementById('next');
+                    var index = 1;
+                    var timer;
+                    function animate(offset) {
+                        var newLeft = parseInt(list.style.left) + offset;
+                        list.style.left = newLeft + 'px';
+                        if (newLeft > -830) {
+                            list.style.left = -2490 + 'px';
+                        }
+                        if (newLeft < -2490) {
+                            list.style.left = -830 + 'px';
+                        }
+                    }
+                    function play() {
+                        timer = setInterval(function () {
+                            next.onclick();
+                        }, 2000)
+                    }
+                    function stop() {
+                        clearInterval(timer);
+                    }
+                    function buttonsShow() {
+                        for (var i = 0; i < buttons.length; i++) {
+                            if (buttons[i].className == "on") {
+                                buttons[i].className = "";
+                            }
+                        }
+                        buttons[index - 1].className = "on";
+                    }
+                    prev.onclick = function () {
+                        index -= 1;
+                        if (index < 1) {
+                            index = 3
+                        }
+                        buttonsShow();
+                        animate(830);
+                    };
+                    next.onclick = function () {
+                        index += 1;
+                        if (index > 3) {
+                            index = 1
+                        }
+                        animate(-830);
+                        buttonsShow();
+                    };
+                    for (var i = 0; i < buttons.length; i++) {
+                        (function (i) {
+                            buttons[i].onclick = function () {
+                                var clickIndex = parseInt(this.getAttribute('index'));
+                                var offset = 830 * (index - clickIndex);
+                                animate(offset);
+                                index = clickIndex;
+                                buttonsShow();
+                            }
+                        })(i)
+                    }
+                    container.onmouseover = stop;
+                    container.onmouseout = play;
+                    play();
+                    function demo() {
+                        var speed=10;
+                        var tab=document.getElementById("demo");
+                        var tab1=document.getElementById("demo1");
+                        var tab2=document.getElementById("demo2");
+                        tab2.innerHTML=tab1.innerHTML;
+                        function Marquee(){
+                            if(tab2.offsetWidth-tab.scrollLeft<=0)
+                                tab.scrollLeft-=tab1.offsetWidth
+                            else{
+                                tab.scrollLeft++;
+                            }
+                        }
+                        var MyMar=setInterval(Marquee,speed);
+                        tab.onmouseover=function() {clearInterval(MyMar)};
+                        tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+                    }demo();
+                }
+    </script>
+</head>
+<body>
+<div id="top" style="background-color:#333;color: white">
+    <p class="left1"> <img src="第二次p/4.png"> 房屋所在城市</p>
+    <p class="left2">郑州<img src="第二次p/03.png"></p>
+    <p class="center">欢迎来到谷居</p>
+    <p class="center1">在线报名</p>
+    <p class="center1">请登陆</p>
+    <p class="center1">免费注册</p>
+    <p class="share">分享：</p>
+    <p class="right">
+        <a href="#"><img  src="第二次p/31.png"></a>
+        <a href="#"><img  src="第二次p/33.png"></a>
+        <a href="#"><img src="第二次p/35.png"></a>
+        <a href="#"> <img   src="第二次p/37.png"></a>
+</p></div>
+<div id="nav">
+    <img class="nav1" src="第二次p/159.png">
+    <div class="nav01">
+        <div ><a href="#" active>首页</a></div>
+        <div class="nav2"><a href="#">装修案例</a></div>
+        <div class="nav2"><a href="#">邻居案例</a></div>
+        <div class="nav2"><a href="#">工地直播间</a></div>
+        <div class="nav2"><a href="#">图库</a></div>
+        <div class="nav2"><a href="#">装修攻略</a></div>
+        <div class="nav2"><a href="#">设计师</a></div>
+</div>
+    <img class="nav3" style="width:1%;height: 18px;" src="第二次p/5.png">
+</div>
+<div id="demo">
+    <div id="indemo">
+        <div id="demo1">
+            <a href="#"><img src="第二次p/1.png"/></a>
+        </div>
+        <div id="demo2"></div>
+    </div>
+</div>
+<script>
+</script>
+<div id="ensure">
+    <div class="c1">
+  <h3>谷居装修保障</h3>
+    <p>让业主清晰看到每一步</p>
+     </div>
+    <div class="c0">
+        <img src="第二次p/09.png">
+        <img src="第二次p/11.png">
+        <img src="第二次p/113.png">
+    </div>
+</div>
+<div id="serve">
+    <div class="c1">
+    <h3>谷居服务流程</h3>
+    <p>业主权益第一，谷居始终保障着业主装修每一步</p>
+    </div>
+    <div class="c20">
+        <div class="c3">
+            <div class="c31">
+                <h2>01</h2>
+                <p>--------------------</p>
+                <p>报名</p>
+            <img src="第二次p/13.png">
+        </div>
+        </div>
+        <div class="c3">
+            <div class="c31">
+            <h2>02</h2>
+            <p>--------------------</p>
+            <p>找灵感</p>
+            <img src="第二次p/15.png">
+        </div></div>
+        <div class="c3">
+            <div class="c31">
+            <h2>03</h2>
+            <p>--------------------</p>
+            <p>找设计师</p>
+            <img src="第二次p/17.png">
+        </div></div>
+        <div class="c3">
+            <div class="c31">
+            <h2>04</h2>
+            <p>--------------------</p>
+            <p>装修</p>
+            <img src="第二次p/19.png">
+        </div></div>
+        <div class="c3">
+            <div class="c31">
+            <h2>05</h2>
+            <p>--------------------</p>
+            <p>全程监管</p>
+            <img src="第二次p/21.png">
+        </div>
+    </div></div>
+        </div>
+<div class="case">
+    <div class="c111">
+        <h3 class="c112">郑州热门案例</h3>
+        <span class="c1122">已为658位业主找到灵感</span>
+    </div>
+    <div class="c2">
+        <input type="radio" id="testTabRadio1" class="test_radio" name="tab" >
+        <label class="test_label" for="testTabRadio1">3</label>
+        <div class="test_tab_content">
+            <div class="d2" >
+                <img class="img" src="第二次p/32.png">
+                <p style="text-align: center">九鼎世家简约风格小清新设计两室</p>
+                <div class="d3" style="font-size: 12px"><p>简约</p><p>87平方米</p><p>7万</p></div>
+                <div class="d4">
+                    <img src="第二次p/013.png">
+                    <span>91</span>
+                    <img src="第二次p/69.png">
+                    <span>126</span>
+                </div>
+            </div>
+            <div class="d2" >
+                <img class="img" src="第二次p/34.png">
+                <p style="text-align: center">开祥御龙城127平欧式三居室 现代... </p>
+                <div class="d3" style="font-size: 12px"><p>欧式</p><p>127平方米</p><p>17万</p></div>
+                <div class="d4">
+                    <img src="第二次p/013.png">
+                    <span>191</span>
+                    <img src="第二次p/69.png">
+                    <span>26</span>
+                </div>
+            </div>
+            <div class="d2" >
+                <img class="img" src="第二次p/36.png">
+                <p style="text-align: center">现代美感功能与风格的结合</p>
+                <div class="d3" style="font-size: 12px"><p>现代</p><p>97平方米</p><p>71万</p></div>
+                <div class="d4">
+                    <img src="第二次p/013.png">
+                    <span>61</span>
+                    <img src="第二次p/69.png">
+                    <span>16</span>
+                </div>
+            </div>
+            <div class="d2" >
+                <img class="img" src="第二次p/38.png">
+                <p style="text-align: center">永威迎宾府131平不一样的新中式风... </p>
+                <div class="d3" style="font-size: 12px"><p>中式</p><p>187平方米</p><p>56万</p></div>
+                <div class="d4">
+                    <img src="第二次p/013.png">
+                    <span>23</span>
+                    <img src="第二次p/69.png">
+                    <span>12</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="c2">
+        <input type="radio" id="testTabRadio2" class="test_radio" name="tab">
+        <label class="test_label" for="testTabRadio2">2</label>
+        <div class="test_tab_content">
+            <div class="d2" >
+                <img class="img" src="第二次p/38.png">
+                <p style="text-align: center">永威迎宾府131平不一样的新中式风... </p>
+                <div class="d3" style="font-size: 12px"><p>中式</p><p>187平方米</p><p>56万</p></div>
+                <div class="d4">
+                    <img src="第二次p/013.png">
+                    <span>23</span>
+                    <img src="第二次p/69.png">
+                    <span>12</span>
+                </div>
+            </div>
+            <div class="d2" >
+                <img class="img" src="第二次p/36.png">
+                <p style="text-align: center">现代美感功能与风格的结合</p>
+                <div class="d3" style="font-size: 12px"><p>现代</p><p>97平方米</p><p>71万</p></div>
+                <div class="d4">
+                    <img src="第二次p/013.png">
+                    <span>61</span>
+                    <img src="第二次p/69.png">
+                    <span>16</span>
+                </div>
+            </div>
+            <div class="d2" >
+                <img class="img" src="第二次p/34.png">
+                <p style="text-align: center">开祥御龙城127平欧式三居室 现代... </p>
+                <div class="d3" style="font-size: 12px"><p>欧式</p><p>127平方米</p><p>17万</p></div>
+                <div class="d4">
+                    <img src="第二次p/013.png">
+                    <span>191</span>
+                    <img src="第二次p/69.png">
+                    <span>26</span>
+                </div>
+            </div>
+            <div class="d2">
+                <img class="img" src="第二次p/32.png">
+                <p style="text-align: center">九鼎世家简约风格小清新设计两室</p>
+                <div class="d3" style="font-size: 12px"><p>简约</p><p>87平方米</p><p>7万</p></div>
+                <div class="d4">
+                    <img src="第二次p/013.png">
+                    <span>91</span>
+                    <img src="第二次p/69.png">
+                    <span>126</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="c2">
+        <input type="radio" id="testTabRadio3" class="test_radio" name="tab" checked>
+        <label class="test_label" for="testTabRadio3">1</label>
+        <div class="test_tab_content">
+            <div class="d2">
+                <img class="img" src="第二次p/32.png">
+                <p style="text-align: center">九鼎世家简约风格小清新设计两室</p>
+                <div class="d3" style="font-size: 12px"><p>简约</p><p>87平方米</p><p>7万</p></div>
+                <div class="d4">
+                    <img src="第二次p/013.png">
+                    <span>91</span>
+                    <img src="第二次p/69.png">
+                    <span>126</span>
+                </div>
+            </div>
+            <div class="d2" >
+                <img class="img" src="第二次p/36.png">
+                <p style="text-align: center">现代美感功能与风格的结合</p>
+                <div class="d3" style="font-size: 12px"><p>现代</p><p>97平方米</p><p>71万</p></div>
+                <div class="d4">
+                    <img src="第二次p/013.png">
+                    <span>61</span>
+                    <img src="第二次p/69.png">
+                    <span>16</span>
+                </div>
+            </div>
+            <div class="d2" >
+                <img class="img" src="第二次p/38.png">
+                <p style="text-align: center">永威迎宾府131平不一样的新中式风... </p>
+                <div class="d3" style="font-size: 12px"><p>中式</p><p>187平方米</p><p>56万</p></div>
+                <div class="d4">
+                    <img src="第二次p/013.png">
+                    <span>23</span>
+                    <img src="第二次p/69.png">
+                    <span>12</span>
+                </div>
+            </div>
+            <div class="d2" >
+                <img class="img" src="第二次p/34.png">
+                <p style="text-align: center">开祥御龙城127平欧式三居室 现代... </p>
+                <div class="d3" style="font-size: 12px"><p>欧式</p><p>127平方米</p><p>17万</p></div>
+                <div class="d4">
+                    <img src="第二次p/013.png">
+                    <span>191</span>
+                    <img src="第二次p/69.png">
+                    <span>26</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="designer">
+    <div class="c1">
+        <h3>郑州优秀设计师</h3>
+        <p>已为658位业主创造惊喜</p>
+    </div>
+    <div id="container">
+        <div id="list" style="left:-830px ">
+            <div class="f 1">
+                <div class="e20">
+                    <div class="e2">
+                        <img src="第二次p/011.png">
+                        <p>曹素雅</p>
+                        <p>设计经验：3年</p>
+                        <p>设计风格：欧式</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="e2">
+                        <img src="第二次p/103.png">
+                        <p>王亚楠</p>
+                        <p>设计经验：5年</p>
+                        <p>设计风格：复古</p>
+                    </div>
+                    <div class="e2">
+                        <img src="第二次p/9.png">
+                        <p>昀阳</p>
+                        <p>设计经验：4年</p>
+                        <p>设计风格：现代</p>
+                    </div>
+                </div>
+                <div class="e21">
+                    <div class="e2">
+                        <img src="第二次p/23.png">
+                        <p>李凌晨</p>
+                        <p>设计经验：5年</p>
+                        <p>设计风格：清新</p>
+                    </div>
+                    <div class="e2">
+                        <img src="第二次p/25.png">
+                        <p>孙莉</p>
+                        <p>设计经验：4年</p>
+                        <p>设计风格：北欧</p>
+                    </div>
+                    <div class="e2">
+                        <img src="第二次p/27.png">
+                        <p>马聪</p>
+                        <p>设计经验：4年</p>
+                        <p>设计风格：简约</p>
+                    </div></div>
+            </div>
+            <div class="f 2">
+                <div class="e20">
+                    <div class="e2">
+                        <img src="第二次p/9.png">
+                        <p>昀阳</p>
+                        <p>设计经验：4年</p>
+                        <p>设计风格：现代</p>
+                    </div>
+                    <div class="e2">
+                        <img src="第二次p/27.png">
+                        <p>马聪</p>
+                        <p>设计经验：4年</p>
+                        <p>设计风格：简约</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="e2">
+                        <img src="第二次p/25.png">
+                        <p>孙莉</p>
+                        <p>设计经验：4年</p>
+                        <p>设计风格：北欧</p>
+                    </div>    </div>
+                <div class="e21">
+                    <div class="e2">
+                        <img src="第二次p/23.png">
+                        <p>李凌晨</p>
+                        <p>设计经验：5年</p>
+                        <p>设计风格：清新</p>
+                    </div>
+                    <div class="e2">
+                        <img src="第二次p/103.png">
+                        <p>王亚楠</p>
+                        <p>设计经验：5年</p>
+                        <p>设计风格：复古</p>
+                    </div>
+                    <div class="e2">
+                        <img src="第二次p/011.png">
+                        <p>曹素雅</p>
+                        <p>设计经验：3年</p>
+                        <p>设计风格：欧式</p>
+                    </div></div>
+            </div>
+            <div class="f 3">
+                <div class="e20">
+                    <div class="e2">
+                        <img src="第二次p/9.png">
+                        <p>昀阳</p>
+                        <p>设计经验：4年</p>
+                        <p>设计风格：现代</p>
+                    </div>
+                    <div class="e2">
+                        <img src="第二次p/011.png">
+                        <p>曹素雅</p>
+                        <p>设计经验：3年</p>
+                        <p>设计风格：欧式</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="e2">
+                        <img src="第二次p/103.png">
+                        <p>王亚楠</p>
+                        <p>设计经验：5年</p>
+                        <p>设计风格：复古</p>
+                    </div>   </div>
+                <div class="e21">
+                    <div class="e2">
+                        <img src="第二次p/23.png">
+                        <p>李凌晨</p>
+                        <p>设计经验：5年</p>
+                        <p>设计风格：清新</p>
+                    </div>
+                    <div class="e2">
+                        <img src="第二次p/25.png">
+                        <p>孙莉</p>
+                        <p>设计经验：4年</p>
+                        <p>设计风格：北欧</p>
+                    </div>
+                    <div class="e2">
+                        <img src="第二次p/27.png">
+                        <p>马聪</p>
+                        <p>设计经验：4年</p>
+                        <p>设计风格：简约</p>
+                    </div>
+                </div></div>
+            <div class="f 4">
+                <div class="e20">
+                    <div class="e2">
+                        <img src="第二次p/9.png">
+                        <p>昀阳</p>
+                        <p>设计经验：4年</p>
+                        <p>设计风格：现代</p>
+                    </div>
+                    <div class="e2">
+                        <img src="第二次p/27.png">
+                        <p>马聪</p>
+                        <p>设计经验：4年</p>
+                        <p>设计风格：简约</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="e2">
+                        <img src="第二次p/25.png">
+                        <p>孙莉</p>
+                        <p>设计经验：4年</p>
+                        <p>设计风格：北欧</p>
+                    </div>    </div>
+                <div class="e2">
+                    <div class="e21">
+                        <img src="第二次p/23.png">
+                        <p>李凌晨</p>
+                        <p>设计经验：5年</p>
+                        <p>设计风格：清新</p>
+                    </div>
+                    <div class="e2">
+                        <img src="第二次p/103.png">
+                        <p>王亚楠</p>
+                        <p>设计经验：5年</p>
+                        <p>设计风格：复古</p>
+                    </div>
+                    <div class="e2">
+                        <img src="第二次p/011.png">
+                        <p>曹素雅</p>
+                        <p>设计经验：3年</p>
+                        <p>设计风格：欧式</p>
+                    </div>
+                </div>
+            </div>
+            <div class="f 5">
+                <div class="e20">
+                    <div class="e2">
+                        <img src="第二次p/9.png">
+                        <p>昀阳</p>
+                        <p>设计经验：4年</p>
+                        <p>设计风格：现代</p>
+                    </div>
+                    <div class="e2">
+                        <img src="第二次p/011.png">
+                        <p>曹素雅</p>
+                        <p>设计经验：3年</p>
+                        <p>设计风格：欧式</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="e2">
+                        <img src="第二次p/103.png">
+                        <p>王亚楠</p>
+                        <p>设计经验：5年</p>
+                        <p>设计风格：复古</p>
+                    </div>   </div>
+                <div class="e21">
+                    <div class="e2">
+                        <img src="第二次p/23.png">
+                        <p>李凌晨</p>
+                        <p>设计经验：5年</p>
+                        <p>设计风格：清新</p>
+                    </div>
+                    <div class="e2">
+                        <img src="第二次p/25.png">
+                        <p>孙莉</p>
+                        <p>设计经验：4年</p>
+                        <p>设计风格：北欧</p>
+                    </div>
+                    <div class="e2">
+                        <img src="第二次p/27.png">
+                        <p>马聪</p>
+                        <p>设计经验：4年</p>
+                        <p>设计风格：简约</p>
+                    </div></div>
+            </div>
+        </div>
+    </div>
+    <div id="buttons">
+        <span index="1" class="on"></span>
+        <span index="2" class=""></span>
+        <span index="3" class=""></span>
+    </div>
+<a href="javascript:;" id="prev" class="arrow">&lt;</a>
+<a href="javascript:;" id="next" class="arrow">&gt;</a>
+
+</div>
+<div id="company">
+    <div class="ad">
+        <h3>郑州热门装修公司</h3>
+        <p>已为658位业主创造温馨</p>
+    </div>
+    <div class="ad1">
+        <ul>
+            <li><strong style="color: orangered;font-size: 28px">1</strong>河南梦想家建筑装饰工程有限公司</li>
+            <li><strong style="color: orangered;font-size: 28px">2</strong>郑州嘉道装饰</li>
+            <li><strong style="color: orangered;font-size: 28px">3</strong> 河南超凡装饰设计工程有限公司</li>
+            <li><strong style="font-size: 28px">4</strong>郑州绿地装饰设计有限公司</li>
+            <li><strong style="font-size: 28px">5</strong>郑州大铭装饰设计有限公司</li>
+            <li><strong style="font-size: 28px">6</strong>郑州绿地装饰设计有限公司</li>
+            <li><strong style="font-size: 28px">7</strong>河南梦想家建筑装饰工程有限公司</li>
+            <li><strong style="font-size: 28px">8</strong>河南超凡装饰设计工程有限公司</li>
+        </ul>
+        </div>
+    </div>
+<div id="known">
+    <div class="c1">
+        <h3>热门装修攻略</h3>
+        <p>已有658位业主学到装修知识</p>
+    </div>
+    <div id="list1" >
+            <div class="g1">
+                <div class="h1">
+                    <img src="第二次p/04.png">
+                    <h4>选择什么样的整装装修公司才靠谱？整装... </h4>
+                    <p>都市白领上班族每天都是公司到宿舍，宿舍到公司，无法兼顾装修时的各种监管、材料购买、质量把控等工序， 最有效...<strong style="color: orangered">详情</strong> </p>
+                    <div class="h2">
+                        <img src="第二次p/013.png">
+                        <span>44</span>
+                        <img src="第二次p/69.png">
+                        <span>23</span>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="h1">
+                    <img src="第二次p/06.png">
+                    <h4>家居欧式摇摇椅如何选购?这四点需要注意 </h4>
+                    <p>结束了繁忙紧张的工作，终于可以回家躺着休息了，但 是没洗漱就躺床上肯定是不行的，那么躺哪里比较合适 呢?摇摇椅是个超不错的选择...<strong style="color: orangered">详情</strong></p>
+                    <div class="h2">
+                        <img src="第二次p/013.png">
+                        <span>34</span>
+                        <img src="第二次p/69.png">
+                        <span>12</span>
+                    </div>
+                </div>
+            </div>
+            <div class="g2">
+                <div class="h1">
+                    <img src="第二次p/12.png">
+                    <h4>夏季装修5大注意事项，准备装修的业主必看</h4>
+                    <p>由于夏天的空气非常极端，一时过于干燥，一时又过于 潮湿，所以夏季一直被认为是不适合装修的季节。绝大 部分人都...<strong style="color: orangered">详情</strong></p>
+                    <div class="h2">
+                        <img src="第二次p/013.png">
+                        <span>23</span>
+                        <img src="第二次p/69.png">
+                        <span>43</span>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="h1">
+                    <img src="第二次p/14.png">
+                    <h4>家居欧式摇摇椅如何选购?这四点需要注意 </h4>
+                    <p>由于夏天的空气非常极端，一时过于干燥，一时又过于 潮湿，所以夏季一直被认为是不适合装修的季节。绝大 部分人都...<strong style="color: orangered">详情</strong></p>
+                    <div class="h2">
+                        <img src="第二次p/013.png">
+                        <span>16</span>
+                        <img src="第二次p/69.png">
+                        <span>34</span>
+                    </div>
+                </div>
+            </div>
+    </div>
+<div id="buttons1">
+    <span index="1" class="on"></span>
+    <span index="2" class=""></span>
+    <span index="3" class=""></span>
+</div>
+</div>
+<div id="footer">
+    <div class="z1" >
+        <span >友情链接:</span>
+        <span><a href="#">南昌房地产</a></span>
+        <span><a href="#">vr家装</a></span>
+        <span><a href="#">上海租房</a></span>
+        <span><a href="#">成都买房</a></span>
+        <span><a href="#">创意设计</a></span>
+        <span><a href="#">东易日盛装饰</a></span>
+        <span><a href="#">海淘论坛</a></span>
+        <span><a href="#">汽车资讯网</a></span>
+        <span><a href="#">火星时代</a></span>
+        <span><a href="#">44957百科</a></span>
+    </div>
+    <div class="z2">
+        <div class="z21">
+            <h2>谷居导航</h2>
+            <div class="z33">
+            <div class="z3">
+        <p>装修效果图</p>
+        <p>装修攻略</p>
+        <p>装修灵感</p>
+        <p>装修案例</p>
+            </div>
+            <div class="z4">
+         <p>家居产品</p>
+        <p>找设计师</p>
+        <p>找装修公司</p>
+        <p>装修论坛</p>
+            </div>
+        <div class="z5">网站地图</div>
+    </div>
+        </div>
+        <div class="z22">
+        <h2>关于我们</h2>
+            <div class="zp">
+            <p>关于谷居</p>
+            <p>联系我们</p>
+            <p>加入我们</p>
+            <p>谷居商城</p>
+    </div></div>
+        <div class="z23">
+            <h2>其他</h2>
+            <div  class="zp">
+                <p>谷居周刊</p>
+                <p>手机app</p>
+                <p>触屏版</p>
+                <p>谷居案例app</p>
+        </div></div>
+    <div class="z24">
+        <img src="第二次p/05.png">
+        <div class="z6">
+        <p >关注谷居微信</p>
+        <p>获得1000套装修案例</p>
+    </div>
+    </div>
+    </div>
+    <div class="z9">
+        Copyright ©2012-2015 Guju.com.cn, All Rights Reserved. 沪ICP备100
+    </div>
+</div>
+</body>
+</html>
